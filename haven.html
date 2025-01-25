@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haven - Min Digitale Have</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="haven.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Min Digitale Have</a>
+            <ul class="nav-links">
+                <li><a href="haven.html" class="active">Haven</a></li>
+                <li><a href="essays.html">Essays</a></li>
+                <li><a href="#">Rødder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="filter-container">
+        <div class="filter-group">
+            <label>Content Type</label>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="essay">Essays</button>
+            <button class="filter-btn" data-filter="note">Notes</button>
+            <button class="filter-btn" data-filter="paper">Papers</button>
+            <button class="filter-btn" data-filter="sketch">Sketches</button>
+            <button class="filter-btn" data-filter="code">Code</button>
+            <button class="filter-btn" data-filter="photo">Photos</button>
+            <button class="filter-btn" data-filter="video">Videos</button>
+            <button class="filter-btn" data-filter="music">Music</button>
+        </div>
+        <div class="filter-group">
+            <label>Growth Stage</label>
+            <button class="filter-btn" data-growth="seedlings">🌱 Spirer</button>
+            <button class="filter-btn" data-growth="budding">🌿 Knopper</button>
+            <button class="filter-btn" data-growth="evergreen">🌳 Stedsegrønt</button>
+        </div>
+        <div class="search-group">
+            <input type="text" id="search-input" placeholder="Search content..." class="search-input">
+        </div>
+    </div>
+
+    <main class="garden-grid">
+        <!-- Essays -->
+        <article class="garden-card" data-type="essay" data-growth="seedlings">
+            <h2>Digital Garden Theory</h2>
+            <div class="card-meta">Essay • January 15, 2024 • 🌱</div>
+            <p class="card-excerpt">An exploration of digital gardens as a new form of personal knowledge management...</p>
+        </article>
+
+        <!-- Notes -->
+        <article class="garden-card" data-type="note" data-growth="budding">
+            <h2>Learning Patterns</h2>
+            <div class="card-meta">Note • January 14, 2024 • 🌿</div>
+            <p class="card-excerpt">Quick thoughts on effective learning patterns in the digital age...</p>
+        </article>
+
+        <!-- Academic Papers -->
+        <article class="garden-card" data-type="paper" data-growth="evergreen">
+            <h2>Digital Knowledge Ecosystems</h2>
+            <div class="card-meta">Academic Paper • January 10, 2024 • 🌳</div>
+            <p class="card-excerpt">A research paper on the evolution of digital knowledge management systems...</p>
+        </article>
+
+        <!-- Art Sketches -->
+        <article class="garden-card" data-type="sketch" data-growth="seedlings">
+            <div class="media-container">
+                <img src="https://via.placeholder.com/300x200" alt="Garden Sketch" loading="lazy">
+            </div>
+            <h2>Garden Planning Sketch</h2>
+            <div class="card-meta">Sketch • January 8, 2024 • 🌱</div>
+        </article>
+
+        <!-- Code Snippets -->
+        <article class="garden-card" data-type="code" data-growth="budding">
+            <h2>High-Performance Filter Implementation</h2>
+            <div class="card-meta">Code • January 5, 2024 • 🌿</div>
+            <pre><code>const filter = items.filter(item => 
+  item.type === selectedType);</code></pre>
+        </article>
+
+        <!-- Photos -->
+        <article class="garden-card" data-type="photo" data-growth="evergreen">
+            <div class="media-container">
+                <img src="https://via.placeholder.com/300x200" alt="Digital Garden" loading="lazy">
+            </div>
+            <h2>Morning Light</h2>
+            <div class="card-meta">Photo • January 3, 2024 • 🌳</div>
+        </article>
+
+        <!-- Videos -->
+        <article class="garden-card" data-type="video" data-growth="budding">
+            <div class="media-container">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/3rMcgbZzBEo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h2>Montuzzo</h2>
+            <div class="card-meta">Video • January 16, 2024 • 🌿</div>
+        </article>
+        <!-- Music -->
+        <article class="garden-card" data-type="music" data-growth="budding">
+            <h2>Ambient Garden Sounds</h2>
+            <div class="card-meta">Music • January 17, 2024 • 🌿</div>
+            <p class="card-excerpt">A collection of ambient sounds recorded in various gardens, mixed with electronic elements...</p>
+        </article>
+
+        <article class="garden-card" data-type="music" data-growth="evergreen">
+            <h2>Garden Symphony No. 1</h2>
+            <div class="card-meta">Music • January 12, 2024 • 🌳</div>
+            <p class="card-excerpt">An original composition inspired by the rhythms and patterns found in nature...</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Karl August Krogh Nybo. All rights reserved.</p>
+    </footer>
+
+    <script src="haven.js"></script>
+</body>
+</html>
