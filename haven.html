@@ -6,6 +6,7 @@
     <title>Haven - Min Digitale Have</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="haven.css">
+    <script src="date-utils.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -46,70 +47,98 @@
     <main class="garden-grid">
         <!-- Essays -->
         <article class="garden-card" data-type="essay" data-growth="seedlings">
-            <h2>Digital Garden Theory</h2>
-            <div class="card-meta">Essay • January 15, 2024 • 🌱</div>
+            <div class="card-header">
+                <h2>Digital Garden Theory</h2>
+                <div class="card-type-meta">Essay 🌱</div>
+            </div>
             <p class="card-excerpt">An exploration of digital gardens as a new form of personal knowledge management...</p>
+            <div class="card-footer">January 15, 2024 • Last tended 0 days ago</div>
         </article>
 
         <!-- Notes -->
         <article class="garden-card" data-type="note" data-growth="budding">
-            <h2>Learning Patterns</h2>
-            <div class="card-meta">Note • January 14, 2024 • 🌿</div>
+            <div class="card-header">
+                <h2>Learning Patterns</h2>
+                <div class="card-type-meta">Note 🌿</div>
+            </div>
             <p class="card-excerpt">Quick thoughts on effective learning patterns in the digital age...</p>
+            <div class="card-footer">January 14, 2024 • Last tended 1 day ago</div>
         </article>
 
         <!-- Academic Papers -->
         <article class="garden-card" data-type="paper" data-growth="evergreen">
-            <h2>Digital Knowledge Ecosystems</h2>
-            <div class="card-meta">Academic Paper • January 10, 2024 • 🌳</div>
+            <div class="card-header">
+                <h2>Digital Knowledge Ecosystems</h2>
+                <div class="card-type-meta">Academic Paper 🌳</div>
+            </div>
             <p class="card-excerpt">A research paper on the evolution of digital knowledge management systems...</p>
+            <div class="card-footer">January 10, 2024 • Last tended 5 days ago</div>
         </article>
 
         <!-- Art Sketches -->
         <article class="garden-card" data-type="sketch" data-growth="seedlings">
+            <div class="card-header">
+                <h2>Garden Planning Sketch</h2>
+                <div class="card-type-meta">Sketch 🌱</div>
+            </div>
             <div class="media-container">
                 <img src="https://via.placeholder.com/300x200" alt="Garden Sketch" loading="lazy">
             </div>
-            <h2>Garden Planning Sketch</h2>
-            <div class="card-meta">Sketch • January 8, 2024 • 🌱</div>
+            <div class="card-footer">January 8, 2024 • Last tended 7 days ago</div>
         </article>
 
         <!-- Code Snippets -->
         <article class="garden-card" data-type="code" data-growth="budding">
-            <h2>High-Performance Filter Implementation</h2>
-            <div class="card-meta">Code • January 5, 2024 • 🌿</div>
+            <div class="card-header">
+                <h2>High-Performance Filter Implementation</h2>
+                <div class="card-type-meta">Code 🌿</div>
+            </div>
             <pre><code>const filter = items.filter(item => 
   item.type === selectedType);</code></pre>
+            <div class="card-footer">January 5, 2024 • Last tended 10 days ago</div>
         </article>
 
         <!-- Photos -->
         <article class="garden-card" data-type="photo" data-growth="evergreen">
+            <div class="card-header">
+                <h2>Morning Light</h2>
+                <div class="card-type-meta">Photo 🌳</div>
+            </div>
             <div class="media-container">
                 <img src="https://via.placeholder.com/300x200" alt="Digital Garden" loading="lazy">
             </div>
-            <h2>Morning Light</h2>
-            <div class="card-meta">Photo • January 3, 2024 • 🌳</div>
+            <div class="card-footer">January 3, 2024 • Last tended 12 days ago</div>
         </article>
 
         <!-- Videos -->
         <article class="garden-card" data-type="video" data-growth="budding">
+            <div class="card-header">
+                <h2>Montuzzo</h2>
+                <div class="card-type-meta">Video 🌿</div>
+            </div>
             <div class="media-container">
                 <iframe width="100%" height="200" src="https://www.youtube.com/embed/3rMcgbZzBEo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <h2>Montuzzo</h2>
-            <div class="card-meta">Video • January 16, 2024 • 🌿</div>
+            <div class="card-footer">January 16, 2024 • Last tended 0 days ago</div>
         </article>
+
         <!-- Music -->
         <article class="garden-card" data-type="music" data-growth="budding">
-            <h2>Ambient Garden Sounds</h2>
-            <div class="card-meta">Music • January 17, 2024 • 🌿</div>
+            <div class="card-header">
+                <h2>Ambient Garden Sounds</h2>
+                <div class="card-type-meta">Music 🌿</div>
+            </div>
             <p class="card-excerpt">A collection of ambient sounds recorded in various gardens, mixed with electronic elements...</p>
+            <div class="card-footer">January 17, 2024 • Last tended 0 days ago</div>
         </article>
 
         <article class="garden-card" data-type="music" data-growth="evergreen">
-            <h2>Garden Symphony No. 1</h2>
-            <div class="card-meta">Music • January 12, 2024 • 🌳</div>
+            <div class="card-header">
+                <h2>Garden Symphony No. 1</h2>
+                <div class="card-type-meta">Music 🌳</div>
+            </div>
             <p class="card-excerpt">An original composition inspired by the rhythms and patterns found in nature...</p>
+            <div class="card-footer">January 12, 2024 • Last tended 3 days ago</div>
         </article>
     </main>
 

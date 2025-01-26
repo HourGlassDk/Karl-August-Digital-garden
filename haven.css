@@ -59,11 +59,47 @@
 }
 
 .garden-card {
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border: 1px solid #eee;
     border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-header {
+    margin-bottom: 1rem;
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.card-type-meta {
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.card-excerpt {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.card-footer {
+    font-size: 0.85rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 0.75rem;
+    margin-top: auto;
 }
 
 .garden-card:hover {

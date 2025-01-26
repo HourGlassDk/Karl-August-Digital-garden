@@ -50,6 +50,26 @@ body {
     color: #333;
 }
 
+/* Blog post styles */
+.post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.post h1 {
+    margin-bottom: 1rem;
+}
+
+.post p {
+    margin-bottom: 1.5rem;
+}
+
+.post-meta {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
 /* Grid layout for essays */
 .essays-grid {
     display: grid;
