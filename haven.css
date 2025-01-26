@@ -130,13 +130,40 @@ code {
     .filter-group {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.75rem;
     }
 
     .filter-btn {
         width: 100%;
+        padding: 0.75rem;
+        font-size: 1.1rem;
+    }
+
+    .search-input {
+        max-width: 100%;
+        padding: 0.75rem;
+        font-size: 1.1rem;
     }
 
     .garden-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+    }
+
+    .garden-card {
+        padding: 1.25rem;
+    }
+
+    .garden-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .card-excerpt {
+        font-size: 0.95rem;
+    }
+
+    .card-meta {
+        font-size: 0.85rem;
     }
 }
