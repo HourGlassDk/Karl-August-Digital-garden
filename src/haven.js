@@ -7,6 +7,49 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentGrowth = null;
     let searchQuery = '';
 
+    // Initialize dates for all cards
+    gardenCards.forEach(card => {
+        const plantedDate = card.dataset.plantedDate;
+        const tendedDate = card.dataset.tendedDate;
+        
+        const plantedSpan = card.querySelector('.planted-date');
+        const tendedSpan = card.querySelector('.tended-date');
+
+        if (plantedSpan && plantedDate) {
+            plantedSpan.textContent = formatDate(plantedDate);
+        }
+        if (tendedSpan && tendedDate) {
+            tendedSpan.textContent = formatDate(tendedDate);
+        }
+    });
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const now = new Date();
+        
+        // Reset time portions to compare dates only
+        date.setHours(0, 0, 0, 0);
+        now.setHours(0, 0, 0, 0);
+        
+        const diffTime = Math.abs(now - date);
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 0) return 'today';
+        if (diffDays === 1) return 'yesterday';
+        
+        if (diffDays >= 365) {
+            const years = Math.floor(diffDays / 365);
+            return `${years} ${years === 1 ? 'year' : 'years'} ago`;
+        }
+        
+        if (diffDays >= 30) {
+            const months = Math.floor(diffDays / 30);
+            return `${months} ${months === 1 ? 'month' : 'months'} ago`;
+        }
+        
+        return `${diffDays} days ago`;
+    }
+
     function filterCards() {
         gardenCards.forEach(card => {
             const type = card.dataset.type;

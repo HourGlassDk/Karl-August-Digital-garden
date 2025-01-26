@@ -12,10 +12,26 @@
 <body class="bg-[oklch(var(--background))] min-h-screen">
     <header class="bg-[oklch(var(--primary))] shadow-sm">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-heading font-bold text-[oklch(var(--background))] hover:text-[oklch(var(--accent))] transition-colors">Min Digitale Have</a>
+            <a href="index.html" 
+               class="text-2xl font-heading font-bold text-[oklch(var(--background))] 
+                      hover:text-[oklch(var(--accent))] transition-colors">
+                Min Digitale Have
+            </a>
             <ul class="flex space-x-6">
-                <li><a href="haven.html" class="text-[oklch(var(--background))] font-body hover:text-[oklch(var(--accent))] transition-colors">Haven</a></li>
-                <li><a href="#" class="text-[oklch(var(--background))] font-body hover:text-[oklch(var(--accent))] transition-colors">Rødder</a></li>
+                <li>
+                    <a href="haven.html" 
+                       class="text-[oklch(var(--background))] font-body 
+                              hover:text-[oklch(var(--accent))] transition-colors">
+                        Haven
+                    </a>
+                </li>
+                <li>
+                    <a href="#" 
+                       class="text-[oklch(var(--background))] font-body 
+                              hover:text-[oklch(var(--accent))] transition-colors">
+                        Rødder
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -24,117 +40,163 @@
         <div class="space-y-6">
             <div class="flex flex-wrap gap-4 items-center">
                 <label class="font-body text-[oklch(var(--text))] font-medium">Content Type</label>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="all">All</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="essay">Essays</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="note">Notes</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="paper">Papers</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="sketch">Sketches</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="code">Code</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="photo">Photos</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="video">Videos</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-filter="music">Music</button>
+                <button 
+                    class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="all">
+                    All
+                </button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="essay">Essays</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="note">Notes</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="paper">Papers</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="sketch">Sketches</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="code">Code</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="photo">Photos</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="video">Videos</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-filter="music">Music</button>
             </div>
             <div class="flex flex-wrap gap-4 items-center">
                 <label class="font-body text-[oklch(var(--text))] font-medium">Growth Stage</label>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-growth="seedlings">🌱 Spirer</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-growth="budding">🌿 Knopper</button>
-                <button class="px-4 py-2 rounded-lg bg-[oklch(var(--background))] border border-[oklch(var(--primary))] hover:bg-[oklch(var(--secondary))] data-[active=true]:bg-[oklch(var(--primary))] data-[active=true]:text-[oklch(var(--background))] focus:outline-none transition-colors duration-300 text-[oklch(var(--text))] font-body" data-growth="evergreen">🌳 Stedsegrønt</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-growth="seedlings">🌱 Spirer</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-growth="budding">🌿 Knopper</button>
+                <button class="px-4 py-2 rounded-lg 
+                           bg-[oklch(var(--background))] 
+                           border border-[oklch(var(--primary))] 
+                           hover:bg-[oklch(var(--secondary))] 
+                           data-[active=true]:bg-[oklch(var(--primary))] 
+                           data-[active=true]:text-[oklch(var(--background))] 
+                           focus:outline-none transition-colors duration-300 
+                           text-[oklch(var(--text))] font-body" 
+                    data-growth="evergreen">🌳 Stedsegrønt</button>
             </div>
             <div class="w-full max-w-md">
-                <input type="text" id="search-input" placeholder="Search content..." class="w-full px-4 py-2 rounded-lg border border-[oklch(var(--primary))] bg-[oklch(var(--background))] text-[oklch(var(--text))] font-body focus:ring-2 focus:ring-[oklch(var(--accent))] focus:border-transparent transition-all placeholder-[oklch(var(--text))]/50">
+                <input type="text" 
+                       id="search-input" 
+                       placeholder="Search content..." 
+                       class="w-full px-4 py-2 rounded-lg 
+                              border border-[oklch(var(--primary))] 
+                              bg-[oklch(var(--background))] 
+                              text-[oklch(var(--text))] font-body 
+                              focus:ring-2 focus:ring-[oklch(var(--accent))] 
+                              focus:border-transparent transition-all 
+                              placeholder-[oklch(var(--text))]/50">
             </div>
         </div>
     </div>
 
     <main class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="essay" data-growth="evergreen" data-planted-date="2023-06-15" data-tended-date="2023-08-20">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Digital Garden Theory</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Essay 🌱</div>
+        <article 
+                class="bg-[oklch(var(--background))] rounded-lg shadow-sm border 
+                        border-[oklch(var(--primary))] hover:shadow-md 
+                        transition-all hover:-translate-y-1 overflow-hidden flex flex-col" 
+                data-type="essay" 
+                data-growth="evergreen" 
+                data-planted-date="2024-10-15" 
+                data-tended-date="2025-01-20">
+            <div class="w-full relative">
+                <img src="https://images.unsplash.com/uploads/1411901100260f56b39b9/ab70b250?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                alt="Digital Garden Theory" class="w-full h-auto object-cover">
             </div>
-            <p class="text-[oklch(var(--text))]/80 font-body mb-4">An exploration of digital gardens as a new form of personal knowledge management...</p>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
+            <div class="p-6 flex-grow flex flex-col">
+                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-3">Digital Garden Theory</h2>
+                <p class="text-[oklch(var(--text))]/80 font-body mb-6 flex-grow">An exploration of digital gardens as a new form of personal knowledge management...</p>
+                <div class="flex items-center gap-4 text-sm text-[oklch(var(--text))]/70 font-body pt-4 border-t border-[oklch(var(--primary))]/20">
+                    <span class="flex items-center gap-2">Essay</span>
+                    <span class="flex items-center gap-2">🌱</span>
+                    <div class="flex-grow text-right flex flex-col">
+                        <span>Planted <span class="planted-date"></span></span>
+                        <span>Last tended <span class="tended-date"></span></span>
+                    </div>
+                </div>
+            </div>
         </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="note" data-growth="budding">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Learning Patterns</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Note 🌿</div>
-            </div>
-            <p class="text-[oklch(var(--text))]/80 font-body mb-4">Quick thoughts on effective learning patterns in the digital age...</p>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <!-- Academic Papers -->
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="paper" data-growth="evergreen">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Digital Knowledge Ecosystems</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Academic Paper 🌳</div>
-            </div>
-            <p class="text-[oklch(var(--text))]/80 font-body mb-4">A research paper on the evolution of digital knowledge management systems...</p>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="photo" data-growth="budding" data-planted-date="2023-07-01" data-tended-date="2023-08-15">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Garden Planning Sketch</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Sketch 🌱</div>
-            </div>
-            <div class="rounded-lg overflow-hidden mb-4">
-                <img src="https://via.placeholder.com/300x200" alt="Garden Sketch" class="w-full h-auto" loading="lazy">
-            </div>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="code" data-growth="budding">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">High-Performance Filter Implementation</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Code 🌿</div>
-            </div>
-            <pre class="bg-[oklch(var(--background))] rounded-lg p-4 overflow-x-auto mb-4 border border-[oklch(var(--primary))]/20"><code class="text-sm font-mono text-[oklch(var(--text))]">const filter = items.filter(item => 
-  item.type === selectedType);</code></pre>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="photo" data-growth="evergreen">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Morning Light</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Photo 🌳</div>
-            </div>
-            <div class="rounded-lg overflow-hidden mb-4">
-                <img src="https://via.placeholder.com/300x200" alt="Digital Garden" class="w-full h-auto" loading="lazy">
-            </div>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="video" data-growth="seedlings" data-planted-date="2023-08-01" data-tended-date="2023-08-10">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Montuzzo</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Video 🌿</div>
-            </div>
-            <div class="rounded-lg overflow-hidden mb-4 aspect-w-16 aspect-h-9">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/3rMcgbZzBEo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="music" data-growth="budding" data-planted-date="2023-07-20" data-tended-date="2023-08-18">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Ambient Garden Sounds</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Music 🌿</div>
-            </div>
-            <p class="text-[oklch(var(--text))]/80 font-body mb-4">A collection of ambient sounds recorded in various gardens, mixed with electronic elements...</p>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
-
-        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))] p-6 hover:shadow-md transition-all hover:-translate-y-1 space-y-4" data-type="music" data-growth="evergreen">
-            <div class="mb-4">
-                <h2 class="text-xl font-heading font-bold text-[oklch(var(--text))] mb-2">Garden Symphony No. 1</h2>
-                <div class="text-sm text-[oklch(var(--text))]/70 font-body flex items-center gap-2">Music 🌳</div>
-            </div>
-            <p class="text-[oklch(var(--text))]/80 font-body mb-4">An original composition inspired by the rhythms and patterns found in nature...</p>
-            <div class="text-sm text-[oklch(var(--text))]/60 font-body border-t border-[oklch(var(--primary))]/20 pt-4"><span class="planted-date"></span> • <span class="tended-date"></span></div>
-        </article>
+        
     </main>
 
     <footer class="bg-[oklch(var(--background))] border-t border-[oklch(var(--primary))] py-6 mt-12">
