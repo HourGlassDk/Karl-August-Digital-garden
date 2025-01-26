@@ -109,6 +109,42 @@ body {
 }
 
 /* Footer styles */
+.garden-button-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.enter-garden-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #2c5282;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enter-garden-button:hover {
+    background-color: #1a365d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.enter-garden-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.essay-excerpt {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Footer styles */
 .site-footer {
     text-align: center;
     padding: 2rem 0;
