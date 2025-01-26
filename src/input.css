@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer theme {
+  :root {
+    /* Fonts */
+    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+    
+    /* Colors */
+    --text: 0.2427 0.059 122.50;
+    --background: 0.9975 0.002 67.80;
+    --primary: 0.4016 0.040 165.29;
+    --secondary: 0.7326 0.075 165.29;
+    --accent: 0.8438 0.039 159.75;
+
+    /* Font Sizes */
+    --font-size-sm: 0.750rem;
+    --font-size-base: 1rem;
+    --font-size-xl: 1.333rem;
+    --font-size-2xl: 1.777rem;
+    --font-size-3xl: 2.369rem;
+    --font-size-4xl: 3.158rem;
+    --font-size-5xl: 4.210rem;
+
+    /* Font Families */
+    --font-family-heading: 'Bodoni Moda';
+    --font-family-body: 'Helvetica Neue';
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+  }
+
+  .dark {
+    --text: 98.40% 0.048 118.69;
+    --background: 0.00% 0.000 0.00;
+    --primary: 81.73% 0.036 163.94;
+    --secondary: 56.69% 0.078 163.84;
+    --accent: 37.68% 0.046 157.59;
+  }
+}
+
+@layer base {
+  body {
+    color: oklch(var(--text));
+    background-color: oklch(var(--background));
+    font-family: var(--font-family-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+  }
+}

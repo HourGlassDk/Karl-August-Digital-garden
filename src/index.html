@@ -1,0 +1,60 @@
+<!-- This line declares that this is a modern web page -->
+<!DOCTYPE html>
+<!-- The main container for the entire webpage, set to English language -->
+<html lang="en">
+<!-- The head section contains important information about the webpage that isn't visible to visitors -->
+<head>
+    <!-- Tells the browser how to handle text characters -->
+    <meta charset="UTF-8">
+    <!-- Makes the website look good on mobile phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title that appears in the browser tab -->
+    <title>Min Digitale Have</title>
+    <!-- Links to a separate file that controls how the website looks -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="date-utils.js"></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<!-- The body contains all the content that visitors can see on the webpage -->
+<body class="bg-background min-h-screen flex flex-col">
+    <header class="bg-background shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-4xl font-bold text-primary hover:text-accent transition-colors">Min Digitale Have</a>
+            <ul class="flex space-x-6">
+                <li><a href="haven.html" class="text-text hover:text-accent transition-colors">Haven</a></li>
+                <li><a href="rødder.html" class="text-text hover:text-accent transition-colors">Rødder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <article class="max-w-2xl mx-auto bg-background rounded-lg shadow-sm border border-secondary p-8">
+            <h1 class="text-5xl font-bold text-primary mb-6">Welcome to my digital garden</h1>
+            <div class="text-sm text-text mb-8">
+                <span>Planted <span class="planted-date" data-planted-date="2025-01-26"></span></span> • 
+                <span>Last tended <span class="tended-date" data-tended-date="2025-01-26"></span></span>
+            </div>
+            <div class="prose prose-green max-w-none space-y-6 text-text">
+                <p>This is my personal digital garden—a space where I cultivate and share my thoughts, projects, and explorations as they grow. Unlike a traditional blog with polished, chronological posts, this is a more organic collection of ideas in various stages of development.</p>
+                <p>Here you'll find everything from rough notes and half-formed thoughts to more polished essays and completed projects. Some pieces are seedlings just taking root, while others have been cultivated over time into more mature works. Everything is open to evolution and growth as my understanding deepens.</p>
+                <p>Think of this space as an interconnected knowledge garden rather than a feed of content. Feel free to wander the paths between ideas, following your curiosity rather than chronology. You might stumble upon works-in-progress, experimental projects, or deeper documentation of my learning journey.</p>
+                <p>I believe in learning and creating in public, so you'll see my thought process exposed here—including the messy parts. Each piece includes indicators of its development stage and last update, so you'll know what you're exploring.</p>
+                <p>Feel free to explore, and I hope you discover something interesting as you wander through these growing ideas.</p>
+            </div>
+            <div class="mt-12 flex justify-center">
+                <a href="haven.html" class="px-6 py-3 bg-primary text-background font-bold rounded-lg hover:bg-accent transition-colors">Enter the Garden</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-background border-t border-secondary py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-text">
+            <p>&copy; Karl August Krogh Nybo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
