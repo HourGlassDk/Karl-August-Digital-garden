@@ -16,6 +16,17 @@ function formatRelativeDate(dateString) {
 
     if (diffDays === 0) return 'today';
     if (diffDays === 1) return 'yesterday';
+    
+    if (diffDays >= 365) {
+        const years = Math.floor(diffDays / 365);
+        return `${years} ${years === 1 ? 'year' : 'years'} ago`;
+    }
+    
+    if (diffDays >= 30) {
+        const months = Math.floor(diffDays / 30);
+        return `${months} ${months === 1 ? 'month' : 'months'} ago`;
+    }
+    
     return `${diffDays} days ago`;
 }
 
@@ -38,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Handle main page dates
-    const mainPlantedDate = document.querySelector('.post-meta .planted-date');
-    const mainTendedDate = document.querySelector('.post-meta .tended-date');
+    const mainPlantedDate = document.querySelector('.planted-date[data-planted-date]');
+    const mainTendedDate = document.querySelector('.tended-date[data-tended-date]');
 
     if (mainPlantedDate) {
         const plantedDate = mainPlantedDate.getAttribute('data-planted-date');
