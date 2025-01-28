@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 @layer theme {
   :root {
     /* Fonts */
@@ -52,5 +51,32 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-size: var(--font-size-4xl);
+    color: oklch(var(--primary));
+  }
+
+  h2 {
+    font-size: var(--font-size-3xl);
+    color: oklch(var(--text));
+  }
+
+  h3 {
+    font-size: var(--font-size-2xl);
+    color: oklch(var(--text));
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid oklch(var(--accent));
+    margin: 2rem 0;
+    width: 100%;
+    opacity: 0.2;
   }
 }

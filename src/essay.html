@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay - Digital Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="haven.css">
+    <script src="date-utils.js"></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-[oklch(var(--background))] min-h-screen">
+    <header class="bg-background shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" 
+               class="text-4xl font-bold text-primary 
+                      hover:text-accent transition-colors">
+                My Digital Garden
+            </a>
+            <ul class="flex space-x-6">
+                <li>
+                    <a href="garden.html" 
+                       class="text-text hover:text-accent transition-colors">
+                        The Garden
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" 
+                       class="text-text hover:text-accent transition-colors">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12 max-w-3xl">
+        <article class="bg-[oklch(var(--background))] rounded-lg shadow-sm border border-[oklch(var(--primary))]/10 overflow-hidden">
+            <div class="w-full relative h-96">
+                <img id="essay-image" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8 md:p-12">
+                <h1 id="essay-title" class="text-4xl md:text-5xl font-heading font-bold text-[oklch(var(--text))] mb-6"></h1>
+                
+                <div class="flex items-center gap-4 text-sm text-[oklch(var(--text))]/70 font-body mb-8 pb-8 border-b border-[oklch(var(--primary))]/10">
+                    <span id="essay-type" class="flex items-center gap-2"></span>
+                    <span id="essay-growth" class="flex items-center gap-2"></span>
+                    <div class="flex-grow text-right flex flex-col">
+                        <span>Planted <span class="planted-date"></span></span>
+                        <span>Last tended <span class="tended-date"></span></span>
+                    </div>
+                </div>
+                
+                <div id="essay-content" class="prose prose-lg max-w-none text-[oklch(var(--text))] prose-headings:font-heading prose-headings:font-semibold prose-p:leading-relaxed prose-p:text-[oklch(var(--text))]/90 prose-li:text-[oklch(var(--text))]/90"></div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-[oklch(var(--background))] border-t border-[oklch(var(--primary))] py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-[oklch(var(--text))]/80 font-body">
+            <p>&copy; Karl August Krogh Nybo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const essayId = params.get('id');
+        
+        // In a real application, you would fetch the essay data from a backend
+        // For now, we'll just use the example data
+        const essayData = {
+            id: 'digital-garden-theory',
+            title: 'Digital Gardens: Cultivating Knowledge in the Modern Age',
+            type: 'Essay',
+            growth: '🌱',
+            plantedDate: '2024-01-26',
+            tendedDate: '2024-01-26',
+            image: 'https://images.unsplash.com/uploads/1411901100260f56b39b9/ab70b250?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            content: `
+                <p class="mb-6">In an era where online content often feels like fast food - quickly consumed and just as quickly forgotten - there's a growing movement that's taking a slower, more thoughtful approach to sharing knowledge online. Digital gardens represent a return to the web's roots while simultaneously pushing forward into new territory. They're not quite blogs, not exactly wikis, and definitely not social media feeds. Instead, they're something altogether more interesting: living, breathing spaces where ideas can grow.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">The Evolution of Personal Knowledge Spaces</h2>
+                <p class="mb-6">When Maggie Appleton documented the rising trend of digital gardens in 2020, she captured a moment when the internet seemed ready for a fundamental shift in how we think about personal knowledge spaces. But what's fascinating is how this concept has continued to evolve, taking on new forms and meanings that extend beyond its initial conception.</p>
+                <p class="mb-6">Digital gardens represent a rebellion against the temporal nature of modern content. While social media platforms push us toward instant reactions and ephemeral thoughts, gardens invite us to plant ideas that might take months or years to fully bloom. They're spaces where half-formed thoughts can exist alongside fully developed theories, where the process of learning becomes as valuable as the final understanding.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">Breaking Free from Chronological Constraints</h2>
+                <p class="mb-6">Traditional blogs follow a strict chronological order, like diary entries stacked one after another. Digital gardens, however, operate more like mind maps spread across space and time. Imagine walking through an actual garden - you don't experience it in any prescribed order. Instead, you follow paths that interest you, stop to examine what catches your eye, and make connections between different areas naturally.</p>
+                <p class="mb-6">This spatial rather than temporal organization creates something magical: a knowledge space that reflects how our minds actually work. We don't think in chronological order; we think in connections, associations, and themes. Digital gardens honor this natural thought process by allowing ideas to link together in organic ways.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">The Art of Growing Ideas</h2>
+                <p class="mb-6">Perhaps the most compelling aspect of digital gardens is their emphasis on growth over perfection. Unlike traditional publishing where content is expected to be polished and complete, gardens embrace the messy reality of how knowledge actually develops. An idea might start as a simple observation - a seed - and gradually develop through multiple iterations as new information and perspectives are incorporated.</p>
+                <p class="mb-6">This approach challenges our conventional wisdom about online content. Instead of hiding our thought processes and only showing finished work, we're invited to share our learning journey openly. It's like having a greenhouse with transparent walls - visitors can see not just the blooming flowers but also the seedlings, the pruning process, and even the occasional failed experiment.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">Beyond Text: Multi-dimensional Knowledge Spaces</h2>
+                <p class="mb-6">While many digital gardens begin as text-based environments, they're evolving to incorporate multiple forms of expression. Some gardeners are experimenting with visual notes, embedding interactive demonstrations, or including audio recordings of their thoughts. This multimedia approach acknowledges that different types of knowledge are best expressed through different mediums.</p>
+                <p class="mb-6">Think of it like a real garden that includes not just plants, but also sculptures, water features, and spaces for reflection. Each element adds a different dimension to the overall experience, creating a richer, more nuanced environment for both the gardener and visitors.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">The Social Aspect of Solitary Gardens</h2>
+                <p class="mb-6">Despite being personal spaces, digital gardens are fostering new forms of intellectual discourse. When ideas are presented as works in progress rather than definitive statements, it creates opportunities for more constructive dialogue. Visitors feel invited to contribute their own perspectives and experiences, leading to richer, more nuanced understanding.</p>
+                <p class="mb-6">This collaborative aspect harkens back to the ancient tradition of scholarly correspondence, where thinkers would share their work-in-progress ideas through letters, enabling an ongoing dialogue that could span years or decades. Digital gardens are reviving this tradition for the modern age.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">Practical Cultivation Methods</h2>
+                <p class="mb-6">While the technical aspects of creating a digital garden can vary widely, the fundamental principles remain consistent. The key is to focus on creating an environment that supports continuous learning and growth. This might include:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-3">
+                    <li>Creating clear but flexible organizational systems</li>
+                    <li>Establishing habits for regular tending and updating</li>
+                    <li>Developing methods for capturing and connecting new ideas</li>
+                    <li>Building in public while maintaining personal space</li>
+                </ul>
+                <p class="mb-6">For those interested in the technical side, resources like Maggie Appleton's guides provide excellent starting points, while platforms like Obsidian, Roam Research, and various static site generators offer different approaches to implementation.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">The Future of Digital Gardening</h2>
+                <p class="mb-6">As we move forward, digital gardens are likely to evolve in exciting new directions. We're seeing experiments with:</p>
+                <ul class="list-disc pl-6 mb-6 space-y-3">
+                    <li>Collaborative gardens where multiple people tend shared knowledge spaces</li>
+                    <li>AI-assisted gardening tools that help identify connections and patterns</li>
+                    <li>Virtual reality interfaces that make knowledge spaces physically explorable</li>
+                    <li>New forms of visualization that help us understand knowledge relationships</li>
+                </ul>
+                <p class="mb-6">The potential here is vast, limited only by our imagination and our ability to create tools that support these new ways of thinking and sharing.</p>
+
+                <h2 class="text-2xl font-heading font-semibold mb-6 text-[oklch(var(--text))] mt-8">Conclusion: A Return to Slow Growth</h2>
+                <p class="mb-6">In our rapid-fire digital world, digital gardens represent a return to slower, more thoughtful ways of sharing knowledge online. They remind us that some ideas need time to develop, that learning is a journey rather than a destination, and that sharing our thought processes can be as valuable as sharing our conclusions.</p>
+                <p class="mb-6">As we continue to experiment with new ways of organizing and sharing knowledge online, digital gardens offer a promising path forward. They suggest that perhaps the future of the internet isn't about moving faster, but about growing deeper roots and fostering more meaningful connections.</p>
+                <p class="mb-6">The digital gardening movement, as Maggie Appleton and others have documented, is more than just a trend - it's a fundamental rethinking of how we engage with knowledge in the digital age. It's an invitation to slow down, think deeply, and watch our ideas grow.</p>
+            `
+        };
+
+        // Update the page content with the essay data
+        document.getElementById('essay-image').src = essayData.image;
+        document.getElementById('essay-image').alt = essayData.title;
+        document.getElementById('essay-type').textContent = essayData.type;
+        document.getElementById('essay-growth').textContent = essayData.growth;
+        document.getElementById('essay-title').textContent = essayData.title;
+        document.getElementById('essay-content').innerHTML = essayData.content;
+
+        // Update dates using the date-utils.js functionality
+        document.querySelectorAll('.planted-date').forEach(el => {
+            el.textContent = formatDate(essayData.plantedDate);
+        });
+        document.querySelectorAll('.tended-date').forEach(el => {
+            el.textContent = formatDate(essayData.tendedDate);
+        });
+    });
+    </script>
+  
